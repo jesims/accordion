@@ -56,6 +56,7 @@ class Accordion extends StatelessWidget with CommonParams {
     Color? headerBackgroundColor,
     Color? headerBackgroundColorOpened,
     double? headerBorderRadius,
+    BoxBorder? headerBorder,
     Widget? leftIcon,
     Widget? rightIcon,
     Widget? header,
@@ -102,6 +103,7 @@ class Accordion extends StatelessWidget with CommonParams {
     this.headerBackgroundColorOpened =
         headerBackgroundColorOpened ?? headerBackgroundColor;
     this.headerBorderRadius = headerBorderRadius;
+    this.headerBorder = headerBorder;
     this.leftIcon = leftIcon;
     this.rightIcon = rightIcon;
     this.flipLeftIconIfOpen?.value = flipLeftIconIfOpen ?? false;
@@ -162,6 +164,7 @@ class Accordion extends StatelessWidget with CommonParams {
                 headerBackgroundColorOpened ??
                 headerBackgroundColor,
             headerBorderRadius: child.headerBorderRadius ?? headerBorderRadius,
+            headerBorder: child.headerBorder ?? headerBorder,
             headerPadding: child.headerPadding ?? headerPadding,
             header: child.header,
             leftIcon: child.leftIcon ?? leftIcon,
